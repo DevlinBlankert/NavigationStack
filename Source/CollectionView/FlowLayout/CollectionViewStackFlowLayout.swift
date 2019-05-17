@@ -56,18 +56,18 @@ class CollectionViewStackFlowLayout: UICollectionViewFlowLayout {
 
 extension CollectionViewStackFlowLayout {
   
-  override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
-    let items = NSArray (array: super.layoutAttributesForElementsInRect(rect)!, copyItems: true)
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        let items = NSArray (array: super.layoutAttributesForElements(in: rect)!, copyItems: true)
     var headerAttributes: UICollectionViewLayoutAttributes?
     
-    items.enumerateObjectsUsingBlock { (object, idex, stop) -> Void in
+        items.enumerateObjects { (object, idex, stop) -> Void in
       let attributes = object as! UICollectionViewLayoutAttributes
       
-      if attributes.representedElementKind == UICollectionElementKindSectionHeader {
+            if attributes.representedElementKind == UICollectionView.elementKindSectionHeader {
         headerAttributes = attributes
       }
       else {
-        self.updateCellAttributes(attributes, headerAttributes: headerAttributes)
+                self.updateCellAttributes(attributes: attributes, headerAttributes: headerAttributes)
       }
     }
     return items as? [UICollectionViewLayoutAttributes]
@@ -84,10 +84,10 @@ extension CollectionViewStackFlowLayout {
     // set contentOffset range
     let contentOffsetX = min(max(0, collectionView.contentOffset.x), allWidth)
     
-    let scale = transformScale(attributes, allWidth: allWidth, offset: contentOffsetX)
-    let move  = transformMove(attributes, itemWidth: itemWidth, offset: contentOffsetX)
-    attributes.transform = CGAffineTransformConcat(scale, move)
-    attributes.alpha = calculateAlpha(attributes, itemWidth: itemWidth, offset: contentOffsetX)
+    let scale = transformScale(attributes: attributes, allWidth: allWidth, offset: contentOffsetX)
+    let move  = transformMove(attributes: attributes, itemWidth: itemWidth, offset: contentOffsetX)
+    attributes.transform = scale.concatenating(move)
+    attributes.alpha = calculateAlpha(attributes: attributes, itemWidth: itemWidth, offset: contentOffsetX)
 
     if additionScale > 0 && openAnimating {
       additionScale -= 0.02
@@ -96,7 +96,7 @@ extension CollectionViewStackFlowLayout {
     attributes.zIndex    = attributes.indexPath.row
   }
   
-  override func shouldInvalidateLayoutForBoundsChange(newBounds: CGRect) -> Bool {
+    override func shouldInvalidateLayout(forBoundsChange newBounds: CGRect) -> Bool {
     return true
   }
 }
@@ -116,7 +116,7 @@ extension CollectionViewStackFlowLayout {
       
       var currentScale = (maximum + minimum) - (minimum + offset / (allWidth / (maximum - minimum)))
       currentScale = max(min(maximum, currentScale), minimum)
-      return CGAffineTransformMakeScale(currentScale, currentScale)
+    return CGAffineTransform(scaleX: currentScale, y: currentScale)
   }
   
   private func transformMove(attributes: UICollectionViewLayoutAttributes,
@@ -131,7 +131,7 @@ extension CollectionViewStackFlowLayout {
       }
       dx = currentContentOffsetX - dx
 
-      return CGAffineTransformMakeTranslation(dx, 0)
+    return CGAffineTransform(translationX: dx, y: 0)
   }
   
   private func calculateAlpha(attributes: UICollectionViewLayoutAttributes, itemWidth: CGFloat, offset: CGFloat) -> CGFloat {

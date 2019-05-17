@@ -32,11 +32,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
-    UIApplication.sharedApplication().statusBarStyle = .LightContent
+    UIApplication.shared.statusBarStyle = .lightContent
     
     UINavigationBar.appearance().titleTextAttributes = [
-      NSForegroundColorAttributeName : UIColor.whiteColor(),
-      NSFontAttributeName : UIFont(name: "OpenSans-Semibold", size: 16)!
+        NSAttributedString.Key.foregroundColor : UIColor.white,
+        NSAttributedString.Key.font : UIFont(name: "OpenSans-Semibold", size: 16)!
     ]
     
     return true

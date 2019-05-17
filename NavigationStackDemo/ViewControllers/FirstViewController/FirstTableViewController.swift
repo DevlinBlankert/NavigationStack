@@ -21,7 +21,7 @@ class FirstTableViewController: UITableViewController {
     navigationItem.titleView = search
   }
 
-  override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
     super.viewWillAppear(animated)
     
     if let navigationController = navigationController {
@@ -29,10 +29,9 @@ class FirstTableViewController: UITableViewController {
     }
   }
   
-  override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    performSegueWithIdentifier("push", sender: nil)
-  }
-  
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "push", sender: nil)
+    }
 }
 
 // MARK: UIGestureRecognizerDelegate
