@@ -85,11 +85,8 @@ extension NavigationStack {
 
 extension NavigationStack: UINavigationControllerDelegate {
     
-    public func navigationController(_ navigationController: UINavigationController,
-                                     willShow viewController: UIViewController,
-                                     animated: Bool) {
+    public func navigationController(_ navigationController: UINavigationController, willShow viewController: UIViewController, animated: Bool) {
         stackDelegate?.navigationController?(navigationController, willShow: viewController, animated: animated)
-       // stackDelegate?.navigationController?(navigationController, willShowViewController: viewController, animated: animated)
         
         if navigationController.viewControllers.count > screens.count + 1 {
             screens.append(view.takeScreenshot())

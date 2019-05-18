@@ -37,7 +37,7 @@ class FirstTableViewController: UITableViewController {
 // MARK: UIGestureRecognizerDelegate
 
 extension FirstTableViewController: UIGestureRecognizerDelegate {
-  func gestureRecognizerShouldBegin(gestureRecognizer: UIGestureRecognizer) -> Bool {
+    func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
     
     if navigationController?.viewControllers.count == 2 {
       return true

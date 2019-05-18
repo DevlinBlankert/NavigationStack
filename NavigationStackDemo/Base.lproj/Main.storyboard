@@ -469,14 +469,14 @@
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="4Af-Xf-z75">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="backHandler:" destination="Y7k-xx-h5q" id="smv-wd-MTx"/>
+                                <action selector="backHandlerWithSender:" destination="Y7k-xx-h5q" id="M8l-0b-nFu"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R6v-A6-DcN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3985" y="1164.5"/>
+            <point key="canvasLocation" x="4609" y="1129"/>
         </scene>
         <!--Ramotion-->
         <scene sceneID="fes-48-lfd">
@@ -675,13 +675,13 @@ USA</string>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enhance Your Life By Having A Sense Of Purpose" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zOb-9O-2eq">
-                                                    <rect key="frame" x="87" y="15" width="505" height="57"/>
+                                                    <rect key="frame" x="87" y="15" width="280" height="57"/>
                                                     <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="16"/>
                                                     <color key="textColor" red="0.36078431370000003" green="0.41176470590000003" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="47b-fv-wTs">
-                                                    <rect key="frame" x="20" y="73" width="560" height="81.5"/>
+                                                    <rect key="frame" x="20" y="73" width="335" height="81.5"/>
                                                     <string key="text">At about this time of year, some months after New Year’s resolutions have been made and kept, or made and neglected, one thing is undeniable: we</string>
                                                     <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="14"/>
                                                     <color key="textColor" red="0.36078431370000003" green="0.41176470590000003" blue="0.52156862749999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -714,7 +714,7 @@ USA</string>
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="3or-01-oV6">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="backHandler:" destination="iaH-ZQ-ay5" id="DZv-HC-MAX"/>
+                                <action selector="backHandlerWithSender:" destination="iaH-ZQ-ay5" id="iCv-LJ-WSr"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -875,7 +875,7 @@ The only moment, the only life we have is in the NOW. What happened a few moment
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="dTy-D2-oW3">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="backHandler:" destination="nzl-xt-jfq" id="5p0-sR-YpK"/>
+                                <action selector="backHandlerWithSender:" destination="nzl-xt-jfq" id="aJ1-iA-kqH"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -892,7 +892,7 @@ The only moment, the only life we have is in the NOW. What happened a few moment
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D7E-8q-4GX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2617" y="1164.5"/>
+            <point key="canvasLocation" x="2866" y="1130"/>
         </scene>
         <!--Sally Perkins-->
         <scene sceneID="Src-9g-5Bx">
@@ -1088,7 +1088,7 @@ USA</string>
                         <barButtonItem key="leftBarButtonItem" image="backButton" id="OAc-d7-aUh">
                             <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <connections>
-                                <action selector="backHandler:" destination="vgN-Iu-4mR" id="oAG-8U-UYd"/>
+                                <action selector="backHandlerWithSender:" destination="vgN-Iu-4mR" id="Nuc-QX-JDT"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -1103,7 +1103,7 @@ USA</string>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zWT-Hc-NvR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3284" y="1164.5"/>
+            <point key="canvasLocation" x="3846" y="1130"/>
         </scene>
     </scenes>
     <resources>
