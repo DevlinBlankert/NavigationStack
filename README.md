@@ -14,8 +14,9 @@ The [iPhone mockup](https://store.ramotion.com/product/iphone-6-mockups?utm_sour
 
 ## Requirements
 
-- iOS 9.0+
-- Xcode 7.2
+- iOS 10.0+
+- Xcode 10
+- swift 4.2
 
 ## Installation
 

@@ -11,6 +11,6 @@ import UIKit
 class FifthViewController: UITableViewController {
   
   @IBAction func backHandler(sender: AnyObject) {
-    navigationController?.popViewControllerAnimated(true)
+    navigationController?.popViewController(animated: true)
   }
 }
