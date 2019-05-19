@@ -86,7 +86,7 @@ extension CollectionViewStackCell {
     layer.shouldRasterize = true;
   }
   
-  private func addBlurOnImage(image: UIImageView) {
+  //private func addBlurOnImage(image: UIImageView) {
     // create effect
 //    UIBlurEffect *blur = [UIBlurEffect effectWithStyle:UIBlurEffectStyleLight];
 //    
@@ -98,7 +98,7 @@ extension CollectionViewStackCell {
 //    [self.imageView addSubview:effectView];
     
     
-  }
+  //}
 
 
 }

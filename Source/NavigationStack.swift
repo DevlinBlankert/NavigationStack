@@ -100,19 +100,6 @@ extension NavigationStack: UINavigationControllerDelegate {
         stackDelegate?.navigationController?(navigationController, didShow: navigationController, animated: animated)
     }
     
-    //  ???
-    //  public func navigationControllerSupportedInterfaceOrientations(navigationController: UINavigationController) -> UIInterfaceOrientationMask {
-    //    return stackDelegate?.navigationControllerSupportedInterfaceOrientations?(navigationController)
-    //  }
-    
-    //  ???
-    //  optional public func navigationControllerPreferredInterfaceOrientationForPresentation(navigationController: UINavigationController) -> UIInterfaceOrientation
-    //
-    
-//    public func navigationController(navigationController: UINavigationController, interactionControllerForAnimationController animationController: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-//        return stackDelegate?.intersa
-//    }
-    
     public func navigationController(_ navigationController: UINavigationController, animationControllerFor operation: UINavigationController.Operation, from fromVC: UIViewController, to toVC: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return stackDelegate?.navigationController?(navigationController, animationControllerFor: operation, from: fromVC, to: toVC)
     }
@@ -132,8 +119,8 @@ extension UIView {
     
     func takeScreenshot() -> UIImage {
         
-        UIGraphicsBeginImageContextWithOptions(self.bounds.size, false, UIScreen.main.scale)
-        drawHierarchy(in: self.bounds, afterScreenUpdates: true)
+        UIGraphicsBeginImageContextWithOptions(self.bounds.size, true, UIScreen.main.scale)
+        drawHierarchy(in: self.bounds, afterScreenUpdates: false)
         
         let image = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
